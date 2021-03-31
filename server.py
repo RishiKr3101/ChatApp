@@ -1,37 +1,28 @@
 import socket
   
-# import threading library
 import threading
   
-# Choose a port that is free
 PORT = 5000
   
-# An IPv4 address is obtained
-# for the server.   
+   
 SERVER = socket.gethostbyname(socket.gethostname())
   
-# Address is stored as a tuple
+
 ADDRESS = (SERVER, PORT)
   
-# the format in which encoding
-# and decoding will occur
 FORMAT = "utf-8"
   
-# Lists that will contains
-# all the clients connected to 
-# the server and their names.
+
 clients, names = [], []
   
-# Create a new socket for
-# the server 
+
 server = socket.socket(socket.AF_INET,
                        socket.SOCK_STREAM)
   
-# bind the address of the 
-# server to the socket 
+
 server.bind(ADDRESS)
   
-# function to start the connection
+
 def startChat():
     
     print("server is working on " + SERVER)
