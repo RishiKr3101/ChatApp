@@ -23,7 +23,8 @@ server.bind(ADDRESS)
 
 def startChat():
     
-    print("server is working on " + SERVER)
+    print("SERVER STARTED at " + SERVER)
+    print("WAITING FOR CONNECTIONS:")
       
     server.listen()
       
@@ -44,7 +45,7 @@ def startChat():
           
         broadcastMessage(f"{name} has joined the chat!".encode(FORMAT))
           
-        conn.send('Connection successful!'.encode(FORMAT))
+        conn.send('[CONNECTED]'.encode(FORMAT))
           
         thread = threading.Thread(target = handle,
                                   args = (conn, addr))
