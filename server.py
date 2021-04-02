@@ -1,5 +1,6 @@
 import socket
   
+<<<<<<< HEAD
 
 import threading
 
@@ -9,11 +10,27 @@ SERVER = socket.gethostbyname(socket.gethostname())
 
 ADDRESS = (SERVER, PORT)
 
+=======
+import threading
+  
+PORT = 5000
+  
+   
+SERVER = socket.gethostbyname(socket.gethostname())
+  
+
+ADDRESS = (SERVER, PORT)
+  
+>>>>>>> b0d886abb6412d04f36032a62fe0973be9acd998
 FORMAT = "utf-8"
   
 
 clients, names = [], []
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> b0d886abb6412d04f36032a62fe0973be9acd998
 server = socket.socket(socket.AF_INET,
                        socket.SOCK_STREAM)
   
